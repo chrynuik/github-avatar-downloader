@@ -24,7 +24,7 @@ getRepoContributors("jquery", "jquery", (err, results) => {
   console.log("Result:", results);
   const contributors = JSON.parse(results);
   contributors.forEach((contributor) => {
-    downloadImageByURL(contributor.avatar_url, contributor.login + ".jpg");
+    downloadImageByURL(contributor.avatar_url, "avatars/" + contributor.login + ".jpg");
   });
 
 
